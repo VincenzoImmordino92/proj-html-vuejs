@@ -1,4 +1,4 @@
-@use './partials/vars' as*;
+@use './partials/vars' as *;
 
 @import 'bootstrap/scss/bootstrap';
 // Supports weights 100-900
@@ -8,4 +8,8 @@ body{
   color: white;
   background-color: black;
   font-family: $font-family;
+}
+
+ul{
+  list-style: none;
 }
