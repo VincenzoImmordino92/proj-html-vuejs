@@ -1,0 +1,11 @@
+@use './partials/vars' as*;
+
+@import 'bootstrap/scss/bootstrap';
+// Supports weights 100-900
+@import '@fontsource-variable/montserrat';
+
+body{
+  color: white;
+  background-color: black;
+  font-family: $font-family;
+}
