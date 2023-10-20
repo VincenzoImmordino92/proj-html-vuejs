@@ -1,13 +1,18 @@
 <script>
+import Container from './partials/Container.vue'
+
 export default {
-Name:'Main'
+Name:'Main',
+components:{
+  Container
+}
 }
 
 </script>
 
 <template>
-  <h1>ARE YOU READY FOR YUOUR NEXT CHALLENGE</h1>
 
+<Container />
 </template>
 
 <style>

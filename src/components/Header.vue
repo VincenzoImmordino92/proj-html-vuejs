@@ -178,7 +178,7 @@ Name:'Header'
   .container_custom{
     width: 100%;
     height: 100%;
-    margin: 0 145px;
+    padding-left: 145px;
     
     .social{
       margin-bottom:180px;
