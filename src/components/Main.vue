@@ -1,10 +1,14 @@
 <script>
-import Container from './partials/Container.vue'
+import Section1 from './partials/Section1.vue';
+import Section2 from './partials/Section2.vue';
+import Section3 from './partials/Section3.vue';
 
 export default {
 Name:'Main',
 components:{
-  Container
+  Section1,
+  Section2,
+  Section3
 }
 }
 
@@ -12,7 +16,9 @@ components:{
 
 <template>
 
-<Container />
+<Section1 />
+<Section2 />
+<Section3 />
 </template>
 
 <style>
