@@ -1,18 +1,22 @@
 <script>
+import { image_squad } from '../../data/image_squad';
+
 export default {
-name:'Box_squad'
+name:'Box_squad',
+data(){
+  return{
+    image_squad
+  }
+}
 }
 </script>
 
 <template>
   <div class="box_squad">
     <ul>
-      <li><img src="/img/1.png" alt="ninja"></li>
-      <li><img src="/img/2.png" alt="for the king"></li>
-      <li><img src="/img/3.png" alt="skullg"></li>
-      <li><img src="/img/4.png" alt="panda"></li>
-      <li><img src="/img/5.png" alt="witch"></li>
-      <li><img src="/img/6.png" alt="astro"></li>
+      <li v-for="(img, index) in image_squad" :key="index">
+        <img :src="img.img" :alt="img.text">
+      </li>
     </ul>
   </div>
   

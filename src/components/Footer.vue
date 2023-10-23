@@ -15,7 +15,7 @@ Name:'Footer',
   
   <img class="bg" src="/img/footer-bg.png" alt="">
   <div class="container padding_custom">
-    <!-- <Box_letters /> IMPORTANT -->
+     <Box_letters /> 
     <!-- footer top -->
     <div class="footer-top d-flex justify-content-between align-items-center border-bottom">
       

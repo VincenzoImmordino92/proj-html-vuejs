@@ -1,6 +1,14 @@
 <script>
+
+import {menuHeader} from '../data/menu_header_footer'
+
 export default {
-Name:'Header'
+Name:'Header',
+data(){
+  return{
+    menuHeader
+  }
+}
 }
 
 </script>
@@ -16,16 +24,13 @@ Name:'Header'
             </div>
           </div>
           <!-- Menu -->
-          <div class="col-auto ">
+          <div class="col">
             <nav>
-              <ul class="d-flex justify-content-center">
+              <ul class="d-flex">
             <!-- menu da ciclare creando un array di con le informazioni dentro(credo) -->
-                <li><a href="#">home<i class="fa-solid fa-chevron-down"></i></a></li>
-                <li><a href="#">pages<i class="fa-solid fa-chevron-down"></i></a></li>
-                <li><a href="#">tournament</a></li>
-                <li><a href="#">shop<i class="fa-solid fa-chevron-down"></i></a></li>
-                <li><a href="#">blog<i class="fa-solid fa-chevron-down"></i></a></li>
-                <li><a href="#">contact</a></li>
+                <li v-for="(item, index) in menuHeader" :key="index">
+                  <a :href="item.href">{{ item.text }}<i :class="item.arrow"></i></a>
+                </li>
               </ul>
             </nav>
           </div>
@@ -77,7 +82,7 @@ Name:'Header'
       width: 100%;
       ul{
         li{
-          padding: 0px 8px;
+          padding: 0px 10px;
           width: 20%;
           flex-shrink: 0;
           a{

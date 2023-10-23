@@ -98,8 +98,8 @@ components:{
           </div>
 
           <div class="button_carousel">
-          <button><i class="fa-solid fa-arrow-left-long"></i></button>
-          <button><i class="fa-solid fa-arrow-right-long"></i></button>
+            <button><i class="fa-solid fa-arrow-left-long"></i></button>
+            <button><i class="fa-solid fa-arrow-right-long"></i></button>
           </div>
         </div>
 
