@@ -1,4 +1,8 @@
-const menuHeader = [
+import { reactive } from "vue"
+
+
+
+const menuHeader_footer = reactive([
   {
     href:'#',
     text:'home',
@@ -27,6 +31,6 @@ const menuHeader = [
     href:'#',
     text:'contact'
   },
-]
+])
 
-export {menuHeader}
+export {menuHeader_footer}

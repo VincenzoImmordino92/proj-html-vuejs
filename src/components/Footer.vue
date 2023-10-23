@@ -1,8 +1,14 @@
 <script>
 
-import Box_letters from './partials/Box_letters.vue'
+import Box_letters from './partials/Box_letters.vue';
+import { menuHeader_footer } from '../data/menu_header_footer';
 export default {
 Name:'Footer',
+data(){
+  return{
+    menuHeader_footer
+  }
+},
   components:{
     Box_letters
   }
@@ -15,7 +21,7 @@ Name:'Footer',
   
   <img class="bg" src="/img/footer-bg.png" alt="">
   <div class="container padding_custom">
-     <Box_letters /> 
+    <Box_letters /> 
     <!-- footer top -->
     <div class="footer-top d-flex justify-content-between align-items-center border-bottom">
       
@@ -25,12 +31,10 @@ Name:'Footer',
       
         <nav>
           <ul class="d-flex justify-content-end">
-            <li><a href="#">home</a></li>
-            <li><a href="#">pages</a></li>
-            <li><a href="#">tournament</a></li>
-            <li><a href="#">shop</a></li>
-            <li><a href="#">blog</a></li>
-            <li><a href="#">contact</a></li>
+            <li v-for="(item, index) in menuHeader_footer" :key="index">
+              <a :href="item.href">{{ item.text }}</a>
+            </li>
+            
           </ul>
         </nav>
     </div>

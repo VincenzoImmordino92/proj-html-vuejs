@@ -1,8 +1,14 @@
 <script>
 
+import {card_section2} from '../../data/card_general'
 
 export default {
 name:'Section2',
+data(){
+  return{
+    card_section2
+  }
+},
 
 components:{
 
@@ -25,51 +31,15 @@ components:{
           <div class="col w-50">
             <!-- Card Info-gaming 1 -->
             <div class="cards_wrap d-flex flex-wrap">
-              <div class="card_custom d-flex flex-column justify-content-center align-items-center text-center">
-
+              <div v-for="(card,index) in card_section2" :key="index" class="card_custom d-flex flex-column justify-content-center align-items-center text-center">
                 <div class="circle d-flex justify-content-center align-items-center">
-                  <img src="/public/img/feature1.png" alt="">
+                  <img :src="card.img" :alt="card.text">
                 </div>
-
-                <h5>live streaming</h5>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-
+                <h5>{{ card.text }}</h5>
+                <p>{{ card.paragraph }}</p>
               </div>
-            <!-- Card Info-gaming 2 -->
-              <div class="card_custom d-flex flex-column justify-content-center align-items-center text-center">
-
-                <div class="circle d-flex justify-content-center align-items-center">
-                  <img src="/public/img/feature2.png" alt="">
-                </div>
-
-                <h5>gaming news</h5>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-
-              </div>
-            <!-- Card Info-gaming 3 -->
-              <div class="card_custom d-flex flex-column justify-content-center align-items-center text-center">
-
-                <div class="circle d-flex justify-content-center align-items-center">
-                  <img src="/public/img/feature3.png" alt="">
-                </div>
-
-                <h5>great tournament</h5>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-
-              </div>
-            <!-- Card Info-gaming 4 -->
-              <div class="card_custom d-flex flex-column justify-content-center align-items-center text-center">
-
-                <div class="circle d-flex justify-content-center align-items-center">
-                  <img src="/public/img/feature4.png" alt="">
-                </div>
-
-                <h5>award ceremony</h5>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-                
-              </div>
-
             </div>
+            
           </div>
         </div>
       </section>

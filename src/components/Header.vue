@@ -1,12 +1,12 @@
 <script>
 
-import {menuHeader} from '../data/menu_header_footer'
+import {menuHeader_footer} from '../data/menu_header_footer';
 
 export default {
 Name:'Header',
 data(){
   return{
-    menuHeader
+    menuHeader_footer
   }
 }
 }
@@ -28,7 +28,7 @@ data(){
             <nav>
               <ul class="d-flex">
             <!-- menu da ciclare creando un array di con le informazioni dentro(credo) -->
-                <li v-for="(item, index) in menuHeader" :key="index">
+                <li v-for="(item, index) in menuHeader_footer" :key="index">
                   <a :href="item.href">{{ item.text }}<i :class="item.arrow"></i></a>
                 </li>
               </ul>
